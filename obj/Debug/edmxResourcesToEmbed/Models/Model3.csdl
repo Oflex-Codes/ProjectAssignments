@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="demonstrationModel5" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ProjectAssigmentTable">
+    <Key>
+      <PropertyRef Name="EmpName" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="ProjectManager" />
+      <PropertyRef Name="ProjectStartDate" />
+      <PropertyRef Name="ProjectEndDate" />
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="Admin" />
+    </Key>
+    <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectManager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectStartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ProjectEndDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Admin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="demonstrationEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProjectAssigmentTables" EntityType="Self.ProjectAssigmentTable" />
+  </EntityContainer>
+</Schema>

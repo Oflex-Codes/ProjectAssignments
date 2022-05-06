@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="demonstrationModel5.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'demonstration.dbo.ProjectAssigmentTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ProjectAssigmentTable">
+          <Key>
+            <PropertyRef Name="EmpName" />
+            <PropertyRef Name="ProjectName" />
+            <PropertyRef Name="ProjectManager" />
+            <PropertyRef Name="ProjectStartDate" />
+            <PropertyRef Name="ProjectEndDate" />
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="Admin" />
+          </Key>
+          <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProjectName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProjectManager" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProjectStartDate" Type="date" Nullable="false" />
+          <Property Name="ProjectEndDate" Type="date" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admin" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="demonstrationModel5StoreContainer">
+          <EntitySet Name="ProjectAssigmentTable" EntityType="Self.ProjectAssigmentTable" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProjectAssigmentTable].[EmpName] AS [EmpName], 
+    [ProjectAssigmentTable].[ProjectName] AS [ProjectName], 
+    [ProjectAssigmentTable].[ProjectManager] AS [ProjectManager], 
+    [ProjectAssigmentTable].[ProjectStartDate] AS [ProjectStartDate], 
+    [ProjectAssigmentTable].[ProjectEndDate] AS [ProjectEndDate], 
+    [ProjectAssigmentTable].[Department] AS [Department], 
+    [ProjectAssigmentTable].[Admin] AS [Admin]
+    FROM [dbo].[ProjectAssigmentTable] AS [ProjectAssigmentTable]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="demonstrationModel5" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ProjectAssigmentTable">
+          <Key>
+            <PropertyRef Name="EmpName" />
+            <PropertyRef Name="ProjectName" />
+            <PropertyRef Name="ProjectManager" />
+            <PropertyRef Name="ProjectStartDate" />
+            <PropertyRef Name="ProjectEndDate" />
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="Admin" />
+          </Key>
+          <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProjectManager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProjectStartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ProjectEndDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="demonstrationEntities5" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ProjectAssigmentTables" EntityType="Self.ProjectAssigmentTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="demonstrationModel5StoreContainer" CdmEntityContainer="demonstrationEntities5">
+          <EntitySetMapping Name="ProjectAssigmentTables">
+            <EntityTypeMapping TypeName="demonstrationModel5.ProjectAssigmentTable">
+              <MappingFragment StoreEntitySet="ProjectAssigmentTable">
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectManager" ColumnName="ProjectManager" />
+                <ScalarProperty Name="ProjectStartDate" ColumnName="ProjectStartDate" />
+                <ScalarProperty Name="ProjectEndDate" ColumnName="ProjectEndDate" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

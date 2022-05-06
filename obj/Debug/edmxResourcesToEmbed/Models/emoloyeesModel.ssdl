@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbEmployeesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmployeesTable">
+    <Key>
+      <PropertyRef Name="EmpName" />
+    </Key>
+    <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EntryDate" Type="date" Nullable="false" />
+    <Property Name="EmployementDate" Type="date" Nullable="false" />
+    <Property Name="salary" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="VaxOrNot" Type="int" Nullable="false" />
+    <Property Name="Position" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="admin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isComplete" Type="int" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="dbEmployeesModelStoreContainer">
+    <EntitySet Name="EmployeesTable" EntityType="Self.EmployeesTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

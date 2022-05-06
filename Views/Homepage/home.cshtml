@@ -1,0 +1,16 @@
+﻿@model ProjectAssignments.Models.usernameStore
+
+@{
+    ViewBag.Title = "home";
+}
+
+<h2>Welcome  @Html.DisplayFor(model => model.username)</h2>
+<div>
+    @Html.ActionLink("+Add Employee", "employeeregistration", new { username = Model.username }) |
+    @*@Html.ActionLink("Details", "Details", new { id = patient.ID_Number }) |*@
+    @Html.ActionLink("+Add Project", "addproject", new { username = Model.username})
+</div>
+
+<br />
+
+<h3>Project You assign:</h3>
